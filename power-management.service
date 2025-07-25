@@ -1,0 +1,13 @@
+[Unit]
+Description=Power management settings activation
+After=multi-user.target
+ConditionFileIsExecutable=/usr/local/sbin/power-management
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/power-management activate safe
+ExecStop=/usr/local/sbin/power-management deactivate safe
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
