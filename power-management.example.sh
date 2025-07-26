@@ -12,7 +12,7 @@ shopt -s inherit_errexit
 #    may be helpful for this).
 #  * A script based on this example would be placed at `/usr/local/sbin/power-management`, to be used with the
 #    corresponding `power-management.service` systemd unit. The systemd unit would be placed in `/etc/systemd/system`,
-#    followed by running `systemctl daemon-reload`, `systemctl enabled power-management` (if desired), and
+#    followed by running `systemctl daemon-reload`, `systemctl enable power-management` (if desired), and
 #    `systemctl start power-management`.
 #  * Place experimental settings in the `experimental` function. When you're satisfied they work as expected, move them
 #    to the `safe` function.
